@@ -81,7 +81,7 @@ The MFI score (0–100) tells you how well your idea resonates:
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/valence.git
+git clone https://github.com/tarunsathish/valence.git
 cd valence
 
 # Install dependencies
@@ -209,10 +209,6 @@ Use [Neon](https://neon.tech) or [Supabase](https://supabase.com) for managed Po
 
 Contributions are welcome! Please fork the repo and submit a pull request.
 
-## License
-
-[MIT](LICENSE)
-
 ---
 
-**Built by [Tarun](https://github.com/YOUR_USERNAME)** — Make every decision testable.
+**Built by [Tarun](https://github.com/tarunsathish)** — Make every decision testable.
