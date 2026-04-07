@@ -1,0 +1,161 @@
+// This is your Prisma schema file
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Auth models
+model Account {
+  id                       String  @id @default(cuid())
+  userId                   String
+  type                     String
+  provider                 String
+  providerAccountId        String
+  refresh_token            String?
+  access_token             String?
+  expires_at               Int?
+  token_type               String?
+  scope                    String?
+  id_token                 String?
+  session_state            String?
+  user                     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  refresh_token_expires_in Int?
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model User {
+  id            String       @id @default(cuid())
+  name          String?
+  email         String       @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  simulations   Simulation[]
+  createdAt     DateTime     @default(now())
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// Valence models
+enum SimulationStatus {
+  QUEUED
+  RUNNING
+  COMPLETE
+  FAILED
+}
+
+enum StimulusType {
+  TEXT
+  URL
+  PDF
+  IMAGE
+}
+
+model Simulation {
+  id             String            @id @default(cuid())
+  userId         String
+  title          String
+  targetTribe    String
+  geography      String
+  stimulusType   StimulusType
+  stimulusText   String
+  stimulusMeta   Json?
+  chaosModes     Json // {hater: boolean, recession: boolean, echoC hamber: boolean}
+  agentCount     Int               @default(50)
+  status         SimulationStatus  @default(QUEUED)
+  createdAt      DateTime          @default(now())
+  completedAt    DateTime?
+  user           User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  agentProfiles  AgentProfile[]
+  agentResponses AgentResponse[]
+  report         SimulationReport?
+  costInCents    Int               @default(0) // Track LLM costs
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// Enhanced agent profile with emotional states and social graph
+model AgentProfile {
+  id            String          @id @default(cuid())
+  simulationId  String
+  // 4D Agent Structure
+  skeleton      Json // {age, income, location, constraints, purchasingPower}
+  soul          Json // {tribe, values, fears, motivations, slang, hotButtons}
+  shadow        Json // {competitors, alternatives, awareness}
+  memorySeed    Json? // {pastInteractions, trustLevel, brandFamiliarity}
+  // Emotional State Engine
+  emotionalState Json // {fear, excitement, trust, stress, noveltyBias, riskAversion, socialApproval}
+  // Social Graph Position
+  socialRole    String? // influencer, contrarian, early_adopter, skeptic, fanatic
+  clusterIndex  Int? // Which friend cluster they belong to
+  createdAt     DateTime        @default(now())
+  simulation    Simulation      @relation(fields: [simulationId], references: [id], onDelete: Cascade)
+  responses     AgentResponse[]
+
+  @@index([simulationId])
+  @@index([socialRole])
+}
+
+model AgentResponse {
+  id                 String       @id @default(cuid())
+  simulationId       String
+  agentProfileId     String
+  rawResponse        String
+  sentimentScore     Float // -1 to 1
+  purchaseIntentScore Float       // 0 to 1
+  viralityScore      Float // 0 to 1
+  objectionTags      String // JSON string of array: ["price", "branding", "trust"]
+  emotionalTriggers  Json? // {confusion: 0.2, anger: 0.8, excitement: 0.1}
+  createdAt          DateTime     @default(now())
+  simulation         Simulation   @relation(fields: [simulationId], references: [id], onDelete: Cascade)
+  agentProfile       AgentProfile @relation(fields: [agentProfileId], references: [id], onDelete: Cascade)
+
+  @@index([simulationId])
+  @@index([agentProfileId])
+}
+
+model SimulationReport {
+  id                 String     @id @default(cuid())
+  simulationId       String     @unique
+  mfiScore           Float // 0-100: Market Fit Index
+  confidenceLevel    Float      @default(0.5) // 0-1: Bayesian confidence
+  topObjections      Json // [{objection, count, severity}]
+  sentimentSummary   String
+  segmentNotes       Json? // Segment-specific insights
+  recommendations    Json // [{priority, action, expectedImpact}]
+  fullAnalysis       String
+  // Timeline projections
+  day7Projection     Json? // {churnRisk, viralityScore, sentiment}
+  day30Projection    Json?
+  day90Projection    Json?
+  day365Projection   Json?
+  createdAt          DateTime   @default(now())
+  simulation         Simulation @relation(fields: [simulationId], references: [id], onDelete: Cascade)
+
+  @@index([mfiScore])
+}

@@ -1,0 +1,519 @@
+{
+  "tribes": [
+    {
+      "id": "gen-z-gamers",
+      "name": "Gen Z Gamers",
+      "description": "Digital-native gamers who value authenticity, community, and competitive experiences",
+      "demographic": {
+        "ageRange": [16, 26],
+        "avgIncome": 35000,
+        "incomeStdDev": 15000,
+        "regions": ["Urban", "Suburban"],
+        "education": ["High School", "Some College", "College"],
+        "employment": ["Student", "Part-time", "Freelance", "Full-time Tech"]
+      },
+      "psychographic": {
+        "values": [
+          "authenticity",
+          "skill expression",
+          "community belonging",
+          "fair competition",
+          "creative freedom",
+          "instant gratification"
+        ],
+        "fears": [
+          "pay-to-win mechanics",
+          "corporate greed",
+          "fake authenticity",
+          "being left behind",
+          "predatory monetization",
+          "boring repetition"
+        ],
+        "motivations": [
+          "status and recognition",
+          "mastery and improvement",
+          "social connection",
+          "entertainment and escape",
+          "self-expression",
+          "competitive achievement"
+        ],
+        "slang": ["fr fr", "no cap", "mid", "based", "ratio", "L take", "W", "touch grass", "chronically online", "its giving"],
+        "hotButtons": [
+          "streamer endorsements",
+          "free-to-play fairness",
+          "cosmetic-only purchases",
+          "skill-based matchmaking",
+          "anti-cheat systems",
+          "cross-platform play"
+        ],
+        "trustSignals": ["popular streamers", "organic gameplay videos", "transparent devs", "no pay-to-win", "active community"],
+        "dealbreakers": ["pay-to-win", "predatory lootboxes", "fake scarcity", "boring meta", "bad anti-cheat"]
+      },
+      "shadow": {
+        "competitors": [
+          "Fortnite",
+          "Valorant",
+          "League of Legends",
+          "Apex Legends",
+          "Roblox",
+          "Minecraft",
+          "Discord Nitro"
+        ],
+        "awarenessLevel": "high",
+        "switchingCost": "low"
+      },
+      "tone": {
+        "style": "casual and meme-heavy",
+        "cynicism": 0.7,
+        "enthusiasm": 0.6,
+        "formality": 0.1
+      },
+      "emotionalProfile": {
+        "baseFear": 0.3,
+        "baseExcitement": 0.6,
+        "baseTrust": 0.4,
+        "baseStress": 0.5,
+        "noveltyBias": 0.8,
+        "riskAversion": 0.3,
+        "socialApproval": 0.9
+      },
+      "socialDistribution": {
+        "influencer": 0.05,
+        "earlyAdopter": 0.15,
+        "contrarian": 0.20,
+        "skeptic": 0.25,
+        "fanatic": 0.10,
+        "follower": 0.25
+      }
+    },
+    {
+      "id": "biohackers",
+      "name": "Biohackers",
+      "description": "Health-obsessed optimizers seeking peak performance through science and data",
+      "demographic": {
+        "ageRange": [25, 45],
+        "avgIncome": 85000,
+        "incomeStdDev": 35000,
+        "regions": ["Urban Tech Hubs", "Suburban"],
+        "education": ["College", "Graduate Degree"],
+        "employment": ["Tech", "Healthcare", "Entrepreneur", "Finance"]
+      },
+      "psychographic": {
+        "values": [
+          "scientific rigor",
+          "data-driven decisions",
+          "longevity",
+          "peak performance",
+          "self-optimization",
+          "purity and quality"
+        ],
+        "fears": [
+          "toxic ingredients",
+          "pseudoscience",
+          "wasted money on snake oil",
+          "health decline",
+          "unverified claims",
+          "hidden side effects"
+        ],
+        "motivations": [
+          "living longer",
+          "feeling energized",
+          "cognitive enhancement",
+          "physical optimization",
+          "competitive edge",
+          "control over health"
+        ],
+        "slang": ["dialed in", "optimized", "biomarkers", "stack", "n=1", "mitochondrial health", "autophagy", "metabolic flexibility"],
+        "hotButtons": [
+          "peer-reviewed studies",
+          "transparent ingredient sourcing",
+          "third-party testing",
+          "bioavailability data",
+          "quantified results",
+          "doctor recommendations"
+        ],
+        "trustSignals": ["scientific citations", "transparent COAs", "expert endorsements", "clinical trials", "no proprietary blends"],
+        "dealbreakers": ["artificial sweeteners", "proprietary blends", "unverified claims", "cheap fillers", "sugar alcohols"]
+      },
+      "shadow": {
+        "competitors": [
+          "Athletic Greens (AG1)",
+          "Momentous",
+          "Thorne",
+          "Pure Encapsulations",
+          "HVMN",
+          "Levels",
+          "InsideTracker"
+        ],
+        "awarenessLevel": "very high",
+        "switchingCost": "medium"
+      },
+      "tone": {
+        "style": "technical and data-focused",
+        "cynicism": 0.8,
+        "enthusiasm": 0.5,
+        "formality": 0.6
+      },
+      "emotionalProfile": {
+        "baseFear": 0.5,
+        "baseExcitement": 0.4,
+        "baseTrust": 0.3,
+        "baseStress": 0.6,
+        "noveltyBias": 0.6,
+        "riskAversion": 0.7,
+        "socialApproval": 0.5
+      },
+      "socialDistribution": {
+        "influencer": 0.08,
+        "earlyAdopter": 0.25,
+        "contrarian": 0.15,
+        "skeptic": 0.35,
+        "fanatic": 0.07,
+        "follower": 0.10
+      }
+    },
+    {
+      "id": "climate-activists",
+      "name": "Climate Activists",
+      "description": "Environmentally conscious individuals taking action against climate change",
+      "demographic": {
+        "ageRange": [18, 35],
+        "avgIncome": 45000,
+        "incomeStdDev": 25000,
+        "regions": ["Urban", "College Towns"],
+        "education": ["Some College", "College", "Graduate Degree"],
+        "employment": ["Non-profit", "Education", "Creative", "Student", "Tech"]
+      },
+      "psychographic": {
+        "values": [
+          "environmental justice",
+          "corporate accountability",
+          "collective action",
+          "sustainability",
+          "ethical consumption",
+          "future generations"
+        ],
+        "fears": [
+          "greenwashing",
+          "performative activism",
+          "corporate hypocrisy",
+          "irreversible damage",
+          "apathy and inaction",
+          "false solutions"
+        ],
+        "motivations": [
+          "making real impact",
+          "holding companies accountable",
+          "protecting ecosystems",
+          "inspiring others",
+          "systemic change",
+          "living aligned values"
+        ],
+        "slang": ["greenwashing", "net zero", "carbon footprint", "regenerative", "circular economy", "climate justice", "eco-anxiety"],
+        "hotButtons": [
+          "B Corp certification",
+          "carbon neutrality",
+          "supply chain transparency",
+          "regenerative practices",
+          "political advocacy",
+          "worker treatment"
+        ],
+        "trustSignals": ["third-party certifications", "transparent reporting", "activist partnerships", "measurable impact", "open sourcing"],
+        "dealbreakers": ["greenwashing", "fossil fuel ties", "deforestation", "exploitative labor", "single-use plastic", "vague claims"]
+      },
+      "shadow": {
+        "competitors": [
+          "Patagonia",
+          "Allbirds",
+          "Too Good To Go",
+          "Ecosia",
+          "Package Free Shop",
+          "The Honest Company"
+        ],
+        "awarenessLevel": "high",
+        "switchingCost": "low to medium"
+      },
+      "tone": {
+        "style": "passionate and justice-focused",
+        "cynicism": 0.9,
+        "enthusiasm": 0.7,
+        "formality": 0.3
+      },
+      "emotionalProfile": {
+        "baseFear": 0.7,
+        "baseExcitement": 0.6,
+        "baseTrust": 0.2,
+        "baseStress": 0.8,
+        "noveltyBias": 0.5,
+        "riskAversion": 0.4,
+        "socialApproval": 0.8
+      },
+      "socialDistribution": {
+        "influencer": 0.10,
+        "earlyAdopter": 0.20,
+        "contrarian": 0.10,
+        "skeptic": 0.20,
+        "fanatic": 0.25,
+        "follower": 0.15
+      }
+    },
+    {
+      "id": "corporate-hr",
+      "name": "Corporate HR Managers",
+      "description": "HR professionals balancing employee wellbeing with organizational goals",
+      "demographic": {
+        "ageRange": [28, 55],
+        "avgIncome": 75000,
+        "incomeStdDev": 30000,
+        "regions": ["Urban", "Suburban"],
+        "education": ["College", "Graduate Degree"],
+        "employment": ["Corporate HR", "People Operations", "Talent Management"]
+      },
+      "psychographic": {
+        "values": [
+          "employee wellbeing",
+          "organizational effectiveness",
+          "compliance and risk mitigation",
+          "diversity and inclusion",
+          "data-driven decision making",
+          "professional development"
+        ],
+        "fears": [
+          "legal liability",
+          "high turnover",
+          "employee backlash",
+          "budget cuts",
+          "poor adoption rates",
+          "leadership pushback"
+        ],
+        "motivations": [
+          "improving retention",
+          "enhancing employee satisfaction",
+          "demonstrating ROI",
+          "building strong culture",
+          "career advancement",
+          "reducing conflict"
+        ],
+        "slang": ["engagement metrics", "retention rate", "employer brand", "talent acquisition", "people analytics", "total rewards"],
+        "hotButtons": [
+          "proven ROI",
+          "easy implementation",
+          "employee survey results",
+          "compliance support",
+          "integration with existing systems",
+          "vendor reliability"
+        ],
+        "trustSignals": ["case studies", "industry certifications", "peer recommendations", "pilot programs", "enterprise clients"],
+        "dealbreakers": ["poor vendor support", "compliance risks", "employee privacy concerns", "high complexity", "unclear pricing"]
+      },
+      "shadow": {
+        "competitors": [
+          "Workday",
+          "BambooHR",
+          "Lattice",
+          "Culture Amp",
+          "15Five",
+          "Greenhouse",
+          "ADP"
+        ],
+        "awarenessLevel": "medium to high",
+        "switchingCost": "high"
+      },
+      "tone": {
+        "style": "professional and diplomatic",
+        "cynicism": 0.6,
+        "enthusiasm": 0.4,
+        "formality": 0.9
+      },
+      "emotionalProfile": {
+        "baseFear": 0.6,
+        "baseExcitement": 0.3,
+        "baseTrust": 0.5,
+        "baseStress": 0.7,
+        "noveltyBias": 0.3,
+        "riskAversion": 0.8,
+        "socialApproval": 0.6
+      },
+      "socialDistribution": {
+        "influencer": 0.05,
+        "earlyAdopter": 0.10,
+        "contrarian": 0.08,
+        "skeptic": 0.40,
+        "fanatic": 0.02,
+        "follower": 0.35
+      }
+    },
+    {
+      "id": "indie-creators",
+      "name": "Indie Creators",
+      "description": "Independent content creators building audiences and monetizing their craft",
+      "demographic": {
+        "ageRange": [20, 40],
+        "avgIncome": 42000,
+        "incomeStdDev": 35000,
+        "regions": ["Urban", "Anywhere with Internet"],
+        "education": ["High School", "Some College", "College"],
+        "employment": ["Self-employed", "Freelance", "Part-time + Creator", "Full-time Creator"]
+      },
+      "psychographic": {
+        "values": [
+          "creative freedom",
+          "audience connection",
+          "financial independence",
+          "authentic expression",
+          "ownership and control",
+          "community building"
+        ],
+        "fears": [
+          "algorithm changes",
+          "platform dependency",
+          "burnout",
+          "income instability",
+          "losing creative control",
+          "audience abandonment"
+        ],
+        "motivations": [
+          "growing audience",
+          "increasing revenue",
+          "maintaining creativity",
+          "building sustainable business",
+          "inspiring others",
+          "escaping traditional employment"
+        ],
+        "slang": ["monetization", "engagement rate", "niche down", "viral", "algorithm", "creator economy", "passive income", "MRR"],
+        "hotButtons": [
+          "revenue potential",
+          "ease of use",
+          "time savings",
+          "audience growth",
+          "creator testimonials",
+          "fair pricing"
+        ],
+        "trustSignals": ["creator success stories", "transparent pricing", "community support", "free tier or trial", "built by creators"],
+        "dealbreakers": ["expensive with unclear ROI", "platform lock-in", "poor customer support", "takes too much time", "spammy feel"]
+      },
+      "shadow": {
+        "competitors": [
+          "Patreon",
+          "Substack",
+          "ConvertKit",
+          "Beehiiv",
+          "Gumroad",
+          "Ko-fi",
+          "Kajabi"
+        ],
+        "awarenessLevel": "high",
+        "switchingCost": "medium"
+      },
+      "tone": {
+        "style": "creative and relatable",
+        "cynicism": 0.5,
+        "enthusiasm": 0.7,
+        "formality": 0.2
+      },
+      "emotionalProfile": {
+        "baseFear": 0.6,
+        "baseExcitement": 0.7,
+        "baseTrust": 0.5,
+        "baseStress": 0.7,
+        "noveltyBias": 0.7,
+        "riskAversion": 0.5,
+        "socialApproval": 0.7
+      },
+      "socialDistribution": {
+        "influencer": 0.12,
+        "earlyAdopter": 0.25,
+        "contrarian": 0.12,
+        "skeptic": 0.20,
+        "fanatic": 0.08,
+        "follower": 0.23
+      }
+    },
+    {
+      "id": "normal-20s",
+      "name": "Normal 20-Somethings",
+      "description": "Everyday people in their 20s navigating careers, relationships, and adult life",
+      "demographic": {
+        "ageRange": [20, 29],
+        "avgIncome": 45000,
+        "incomeStdDev": 20000,
+        "regions": ["Urban", "Suburban", "Small Town"],
+        "education": ["Some College", "College", "Trade School"],
+        "employment": ["Full-time", "Part-time", "Entry-level", "Service Industry", "Office Job"]
+      },
+      "psychographic": {
+        "values": [
+          "affordability",
+          "convenience",
+          "social connection",
+          "work-life balance",
+          "experiences over things",
+          "authenticity"
+        ],
+        "fears": [
+          "wasting money",
+          "missing out",
+          "being scammed",
+          "looking stupid",
+          "commitment to wrong choice",
+          "adulting failures"
+        ],
+        "motivations": [
+          "saving money",
+          "having fun",
+          "keeping up with friends",
+          "making life easier",
+          "looking good",
+          "finding good deals"
+        ],
+        "slang": ["lowkey", "bet", "slay", "sus", "vibe check", "main character energy", "no thoughts just vibes", "rent is due"],
+        "hotButtons": [
+          "price and value",
+          "friend recommendations",
+          "social media reviews",
+          "free trials",
+          "ease of use",
+          "relatable branding"
+        ],
+        "trustSignals": ["friend recommendations", "TikTok reviews", "Reddit threads", "transparent pricing", "relatable brand voice"],
+        "dealbreakers": ["too expensive", "feels like a scam", "hidden fees", "cringe marketing", "complicated setup"]
+      },
+      "shadow": {
+        "competitors": [
+          "Amazon",
+          "Spotify",
+          "Netflix",
+          "Uber",
+          "DoorDash",
+          "Venmo",
+          "TikTok Shop"
+        ],
+        "awarenessLevel": "medium",
+        "switchingCost": "low"
+      },
+      "tone": {
+        "style": "casual and conversational",
+        "cynicism": 0.5,
+        "enthusiasm": 0.6,
+        "formality": 0.2
+      },
+      "emotionalProfile": {
+        "baseFear": 0.4,
+        "baseExcitement": 0.5,
+        "baseTrust": 0.5,
+        "baseStress": 0.6,
+        "noveltyBias": 0.6,
+        "riskAversion": 0.5,
+        "socialApproval": 0.7
+      },
+      "socialDistribution": {
+        "influencer": 0.05,
+        "earlyAdopter": 0.15,
+        "contrarian": 0.10,
+        "skeptic": 0.25,
+        "fanatic": 0.05,
+        "follower": 0.40
+      }
+    }
+  ]
+}
