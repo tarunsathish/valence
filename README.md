@@ -167,17 +167,6 @@ Valence is designed to minimize LLM spend:
 | 100 | $0.10–$0.30 |
 | 300 | $0.30–$0.90 |
 
-## Deployment
-
-Deploy to [Vercel](https://vercel.com) in minutes:
-
-1. Push to GitHub
-2. Import the repo on Vercel
-3. Add your environment variables
-4. Deploy
-
-Use [Neon](https://neon.tech) or [Supabase](https://supabase.com) for managed PostgreSQL.
-
 ## Roadmap
 
 ### Current (MVP)
@@ -205,10 +194,3 @@ Use [Neon](https://neon.tech) or [Supabase](https://supabase.com) for managed Po
 - [ ] Enterprise data clean-room
 - [ ] Tribe marketplace
 
-## Contributing
-
-Contributions are welcome! Please fork the repo and submit a pull request.
-
----
-
-**Built by [Tarun](https://github.com/tarunsathish)** — Make every decision testable.
